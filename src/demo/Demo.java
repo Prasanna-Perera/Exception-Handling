@@ -8,10 +8,14 @@ class Demo{
 		int[] ar=new int[3];
 		String name="Niroth";
 		int a=0,b=6,c=3;
-		ar[c]=name.charAt(b)/a;
+		try{
+			ar[c]=name.charAt(b)/a; //ArithmeticException, 	//ArrayIndexOutOfBoundsException,
+			//StringIndexOutOfBoundsException
+		}catch(RuntimeException ex){
+			System.out.println(ex.getMessage());
+		}
 	}
 }
-
 
 
 
