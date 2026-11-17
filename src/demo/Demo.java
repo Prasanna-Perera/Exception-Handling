@@ -11,12 +11,13 @@ package demo;
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		String sNum="120a";
-		int num=Integer.parseInt(sNum);
-		System.out.println("Num : "+num);
+		double x=42,y=0;
+		double a=x/y;
+		System.out.println("x/y : "+a); //Infinity
 		System.out.println("End main");
 	}
 }
+
 
 
 
