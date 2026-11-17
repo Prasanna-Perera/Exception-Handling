@@ -6,19 +6,45 @@ package demo;
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		int x=42,y=0;
 		int a;
 		try{
-			a=x/y; //y=0
-			System.out.println("try block");
+			a=100;
 		}catch(ArithmeticException ex){
-			a=-1;
-			System.out.println("catch block");
+
 		}
-		System.out.println("x/y : "+a);
+		System.out.println(a); //Illegal
 		System.out.println("End main");
 	}
 }
+//—-----------------------------------------------------------------
+class Demo{	
+	public static void main(String args[]){
+		System.out.println("Start main");
+		int a;
+		try{
+			a=100;
+		}catch(ArithmeticException ex){
+			a=-1;
+		}
+		System.out.println(a); //legal
+		System.out.println("End main");
+	}
+}
+//—----------------------------------------------------
+class Demo{	
+	public static void main(String args[]){
+		System.out.println("Start main");
+		final int a;
+		try{
+			a=100;
+		}catch(ArithmeticException ex){
+			a=-1; //Illegal
+		}
+		System.out.println(a); 
+		System.out.println("End main");
+	}
+}
+
 
 
 
