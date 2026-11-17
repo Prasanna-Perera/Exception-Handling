@@ -11,10 +11,11 @@ package demo;
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		int x=42,y=0;
-		int a=x/y;
-		System.out.println("x/y : "+a);
+		String name="Niroth";
+		char lastCharacter=name.charAt(6);
+		System.out.println("Last Character : "+lastCharacter);
 		System.out.println("End main");
 	}
 }
+
 
