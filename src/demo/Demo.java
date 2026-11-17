@@ -8,17 +8,11 @@ class Demo{
 	public static void main(String args[]){
 		System.out.println("Start main");
 		int[] ar=new int[3];
-		String name="Niroth";
-		int a=0,b=6,c=3;
-		try{
-			ar[c]=name.charAt(b)/a; 
-		}catch(ArithmeticException ex){
-			System.out.println("Arithmetic error");
-		}catch(StringIndexOutOfBoundsException | ArrayIndexOutOfBoundsException ex){ //Since JDK6
-			System.out.println("index error");
-		}
+		ar[-100]=300; //throws ArrayIndexOutOfBoundsException {Compile time unchecked}
+		Thread.sleep(2000); //throws InterruptedException {Compile time checked}
 		System.out.println("End main");
 	}
 }
+
 
 
