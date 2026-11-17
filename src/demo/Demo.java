@@ -3,22 +3,44 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package demo;
-/*
-class Thread{
-	public static void sleep(long x)throws InterruptedException{
+import java.sql.*;
+class DBConnection{
+	private static DBConnection dbConnection;
+	private Connection connection;
+	
+	private DBConnection()throws ClassNotFoundException, SQLException{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		connection=DriverManager.getConnection("jdbc:mysql://localhost/thogaKade","root","1234");
+	}
+	public static DBConnection getInstance()throws ClassNotFoundException,SQLException{
+		if(dbConnection==null){
+			dbConnection=new DBConnection();
+		}
+		return dbConnection;
+	}
+	public Connection getConnection(){
+		return connection;
+	}
+}
+class CustomerControll{
+	public static boolean addCustomer(String id, String name, String address, double salary)throws ClassNotFoundException,SQLException{
+		PreparedStatement stm=DBConnection.getInstance().getConnection().prepareStatement("Insert into Customer Values(?,?,?,?)");
 		//
+		//
+		return stm.executeUpdate()>0;
 	}
 }
-*/
+
+
+
 class Demo{	
-	public static void main(String args[])throws InterruptedException{
-		System.out.println("Start main");
-		int[] ar=new int[3];
-		ar[-100]=300;
-		Thread.sleep(2000);
-		System.out.println("End main");
+	public static void main(String args[]){
+		try{
+			CustomerControll.addCustomer("C0001","Niroth","Panadura",56000);
+		}catch(SQLException ex){
+			
+		}catch(ClassNotFoundException ex){
+			//
+		}
 	}
 }
-
-
-
