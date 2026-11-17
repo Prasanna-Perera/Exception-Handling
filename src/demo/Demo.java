@@ -6,16 +6,14 @@ package demo;
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		int x=42,y=0;
-		int a;
+		String name="Niroth";
+		char lastCharacter;
 		try{
-			a=x/y;
-		}catch(ArithmeticException ex){
-			a=-1;
+			lastCharacter=name.charAt(6);
+		}catch(StringIndexOutOfBoundsException ex){
+			lastCharacter=name.charAt(name.length()-1);
 		}
-		System.out.println("x/y : "+a);
+		System.out.println("Last Character : "+lastCharacter);
 		System.out.println("End main");
 	}
 }
-//if y = 0 then result (a)-> "-1"
-//int a=y==0 ? -1:x/y; (Data validation)
