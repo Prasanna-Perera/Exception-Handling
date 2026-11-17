@@ -9,8 +9,8 @@ class Demo{
 		int ar[]=new int[3];
 		try{
 			ar[3]=100;
-		}catch(ArrayIndexOutOfBoundsException ex){
-			System.out.println(ex.getMessage());
+		}catch(ArithmeticException ex){
+			ex.printStackTrace();
 		}
 		System.out.println("End main");
 	}
