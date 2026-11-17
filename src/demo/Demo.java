@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package demo;
+
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
@@ -15,7 +16,9 @@ class Demo{
 			System.out.println("Arithmetic error");
 		}catch(StringIndexOutOfBoundsException ex){
 			System.out.println("String index error");
-		}catch(ArrayIndexOutOfBoundsException ex){
+		}
+		int x;
+		catch(ArrayIndexOutOfBoundsException ex){
 			System.out.println("Array index error");
 		}catch(IndexOutOfBoundsException ex){
 			System.out.println("any index error");
@@ -23,6 +26,7 @@ class Demo{
 			System.out.println("any runtime error");
 		}
 		System.out.println("End main");
-
+	}
+}
 
 
