@@ -6,10 +6,10 @@ package demo;
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		int x=42,y=2;
+		int x=42,y=0;
 		int a;
 		try{
-			a=x/y; //y=2
+			a=x/y; //y=0
 			System.out.println("try block");
 		}catch(ArithmeticException ex){
 			a=-1;
@@ -19,5 +19,6 @@ class Demo{
 		System.out.println("End main");
 	}
 }
+
 
 
