@@ -11,11 +11,13 @@ package demo;
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		int[] ar=new int[3];
-		ar[3]=100;
+		String sNum="120a";
+		int num=Integer.parseInt(sNum);
+		System.out.println("Num : "+num);
 		System.out.println("End main");
 	}
 }
+
 
 
 
