@@ -8,18 +8,15 @@ package demo;
  *
  * @author ASUS ROG
  */
-class A{}
-class B extends A{public void mB(){System.out.println("mB");}}
-class C extends A{public void mC(){System.out.println("mC");}}
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		A a1=new B();
-		C c1=(C)a1;
-		c1.mC();
+		int[] ar=new int[3];
+		ar[3]=100;
 		System.out.println("End main");
 	}
 }
+
 
 
 
