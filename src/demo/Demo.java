@@ -8,20 +8,13 @@ package demo;
  *
  * @author ASUS ROG
  */
-public class Demo {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-       class Demo{	
-			int[] ar;
-		ar=new int[-3]; //Legal, throws an error at runtime
-		//throws "NegativeArraySizeException"1	
-
+class Demo{	
+	public static void main(String args[]){
+		System.out.println("Start main");
+		int x=42,y=0;
+		int a=x/y;
+		System.out.println("x/y : "+a);
+		System.out.println("End main");
 	}
 }
- 
-    }
-    
-}
+
