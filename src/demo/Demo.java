@@ -14,16 +14,8 @@ class Demo{
 			ar[c]=name.charAt(b)/a; 
 		}catch(ArithmeticException ex){
 			System.out.println("Arithmetic error");
-		}catch(StringIndexOutOfBoundsException ex){
-			System.out.println("String index error");
-		}
-		int x;
-		catch(ArrayIndexOutOfBoundsException ex){
-			System.out.println("Array index error");
-		}catch(IndexOutOfBoundsException ex){
-			System.out.println("any index error");
-		}catch(RuntimeException ex){
-			System.out.println("any runtime error");
+		}catch(StringIndexOutOfBoundsException | ArrayIndexOutOfBoundsException ex){ //Since JDK6
+			System.out.println("index error");
 		}
 		System.out.println("End main");
 	}
