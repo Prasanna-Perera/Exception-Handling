@@ -5,17 +5,25 @@
 package demo;
 class Demo{	
 	public static void main(String args[]){
+		System.out.println("Start main");
 		int[] ar=new int[3];
 		String name="Niroth";
 		int a=0,b=6,c=3;
 		try{
-			ar[c]=name.charAt(b)/a; //ArithmeticException, 	//ArrayIndexOutOfBoundsException,
-			//StringIndexOutOfBoundsException
-		}catch(RuntimeException ex){
-			System.out.println(ex.getMessage());
+			ar[c]=name.charAt(b)/a; 
+		}catch(ArithmeticException ex){
+			System.out.println("Arithmetic error");
+		}catch(StringIndexOutOfBoundsException ex){
+			System.out.println("String index error");
+		}catch(ArrayIndexOutOfBoundsException ex){
+			System.out.println("Array index error");
 		}
+		System.out.println("End main");
 	}
 }
+//A.I.O,O.B.E-->prints "Array Index error"
+//S.I.O,O.B.E-->prints "String Index error"
+//Arithmetic -->prints "Arithmetic error	
 
 
 
