@@ -6,14 +6,16 @@ package demo;
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		int[] ar=new int[3];
+		String sNum="120a";
+		int num;
 		try{
-			ar[3]=100;
-		}catch(ArrayIndexOutOfBoundsException ex){
-			ar[ar.length-1]=100;
+			num=Integer.parseInt(sNum);
+		}catch(NumberFormatException ex){
+			num=0;
 		}
-		System.out.println("ar[last Index] : "+ar[2]);
+		System.out.println("Num : "+num);
 		System.out.println("End main");
 	}
 }
+
 
