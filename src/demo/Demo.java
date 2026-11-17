@@ -15,10 +15,10 @@ public class Demo {
      */
     public static void main(String[] args) {
        class Demo{	
-	public static void main(String args[]){
-		double d=45.234;
-		int x;
-		x=d; //Illegal, incompatible types
+			int[] ar;
+		ar=new int[-3]; //Legal, throws an error at runtime
+		//throws "NegativeArraySizeException"1	
+
 	}
 }
  
