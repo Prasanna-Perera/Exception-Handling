@@ -8,19 +8,13 @@ class Demo{
 		System.out.println("Start main");
 		int ar[]=new int[3];
 		try{
-			ar[3]=100;  //throws "ArrayIndexOutOfBoundsException"
-		}catch(/*Insert code here*/){
-			System.out.println("catch block");
+			ar[3]=100;
+		}catch(ArrayIndexOutOfBoundsException ex){
+			System.out.println(ex.getMessage());
 		}
 		System.out.println("End main");
 	}
 }
-//A. ArrayIndexOutOfBoundsException ex
-//B. IndexOutOfBoundsException ex
-//C. RuntimeException ex
-//D. Exception ex
-//E. Throwable ex
-//F. Object ex //Illegal
 
 
 
