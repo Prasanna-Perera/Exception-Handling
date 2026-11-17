@@ -8,14 +8,18 @@ package demo;
  *
  * @author ASUS ROG
  */
+class A{}
+class B extends A{public void mB(){System.out.println("mB");}}
+class C extends A{public void mC(){System.out.println("mC");}}
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		String name="Niroth";
-		char lastCharacter=name.charAt(6);
-		System.out.println("Last Character : "+lastCharacter);
+		A a1=new B();
+		C c1=(C)a1;
+		c1.mC();
 		System.out.println("End main");
 	}
 }
+
 
 
