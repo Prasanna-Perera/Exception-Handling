@@ -6,14 +6,16 @@ package demo;
 class Demo{	
 	public static void main(String args[]){
 		System.out.println("Start main");
-		String sNum="120a";
-		int num;
+		int x=42,y=2;
+		int a;
 		try{
-			num=Integer.parseInt(sNum);
-		}catch(NumberFormatException ex){
-			num=0;
+			a=x/y; //y=2
+			System.out.println("try block");
+		}catch(ArithmeticException ex){
+			a=-1;
+			System.out.println("catch block");
 		}
-		System.out.println("Num : "+num);
+		System.out.println("x/y : "+a);
 		System.out.println("End main");
 	}
 }
