@@ -3,9 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package demo;
-class Demo{	
-	public static void main(String args[]){
-		System.out.println("Start main");
 		int[] ar=new int[3];
 		String name="Niroth";
 		int a=0,b=6,c=3;
@@ -13,6 +10,8 @@ class Demo{
 			ar[c]=name.charAt(b)/a; 
 		}catch(ArithmeticException ex){
 			System.out.println("Arithmetic error");
+		}catch(IndexOutOfBoundsException ex){
+			System.out.println("any index error");
 		}catch(StringIndexOutOfBoundsException ex){
 			System.out.println("String index error");
 		}catch(ArrayIndexOutOfBoundsException ex){
@@ -21,10 +20,5 @@ class Demo{
 		System.out.println("End main");
 	}
 }
-//A.I.O,O.B.E-->prints "Array Index error"
-//S.I.O,O.B.E-->prints "String Index error"
-//Arithmetic -->prints "Arithmetic error	
-
-
 
 
